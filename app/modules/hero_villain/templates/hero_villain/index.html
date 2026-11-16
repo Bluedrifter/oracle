@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Hero or Villain? | Oracle{% endblock %}
+{% block content %}
+<h1>Hero or Villain?</h1>
+<p class="sub">type a name. the oracle will decide who you really are.</p>
+
+<form method="post">
+  <input name="name" placeholder="a name, any name" maxlength="50" autofocus>
+  <button>judge me</button>
+</form>
+
+{% if error %}<p class="error">{{ error }}</p>{% endif %}
+
+{% if result %}
+<section class="result {{ result.verdict }}">
+  <p>{{ result.name }} is a</p>
+  <h2>{{ result.verdict|upper }}</h2>
+  <p>confidence: <b>{{ result.conf.pct }}</b></p>
+  <p class="note">{{ result.conf.note }}<br>margin of error: {{ result.conf.margin }}</p>
+</section>
+{% endif %}
+
+{% if history %}
+<h3>previous judgments</h3>
+<ul class="history">
+  {% for text, verdict, conf in history %}
+  <li>{{ text }} &rarr; {{ verdict }} <small>({{ (conf * 100)|round(1) }}%)</small></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Oracle of Very Useful Predictions{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header><a href="{{ url_for('home') }}">oracle<span>//</span>very-useful</a></header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer>predictions are final. accuracy is not guaranteed. confidence is.</footer>
+</body>
+</html>
