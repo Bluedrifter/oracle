@@ -1,0 +1,35 @@
+{
+  "dataset_size": 60,
+  "class_counts": {
+    "hero": 30,
+    "villain": 30
+  },
+  "cv": "5-fold x 5 repeats, stratified, seed 42",
+  "models": {
+    "baseline_majority": {
+      "mean": 0.5,
+      "std": 0.0
+    },
+    "naive_bayes_char_2_4": {
+      "mean": 0.5,
+      "std": 0.1179
+    },
+    "naive_bayes_char_2_5": {
+      "mean": 0.5,
+      "std": 0.1179
+    },
+    "logreg_char_2_4": {
+      "mean": 0.4867,
+      "std": 0.124
+    },
+    "logreg_word": {
+      "mean": 0.5,
+      "std": 0.0
+    },
+    "random_forest_char_2_4": {
+      "mean": 0.46,
+      "std": 0.1133
+    }
+  },
+  "best": "naive_bayes_char_2_4"
+}
