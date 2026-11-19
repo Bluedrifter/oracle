@@ -1,8 +1,8 @@
 {
-  "dataset_size": 60,
+  "dataset_size": 100,
   "class_counts": {
-    "hero": 30,
-    "villain": 30
+    "hero": 50,
+    "villain": 50
   },
   "cv": "5-fold x 5 repeats, stratified, seed 42",
   "models": {
@@ -11,24 +11,24 @@
       "std": 0.0
     },
     "naive_bayes_char_2_4": {
-      "mean": 0.5,
-      "std": 0.1179
+      "mean": 0.558,
+      "std": 0.0821
     },
     "naive_bayes_char_2_5": {
-      "mean": 0.5,
-      "std": 0.1179
+      "mean": 0.556,
+      "std": 0.0864
     },
     "logreg_char_2_4": {
-      "mean": 0.4867,
-      "std": 0.124
+      "mean": 0.544,
+      "std": 0.0852
     },
     "logreg_word": {
-      "mean": 0.5,
-      "std": 0.0
+      "mean": 0.536,
+      "std": 0.0332
     },
     "random_forest_char_2_4": {
-      "mean": 0.46,
-      "std": 0.1133
+      "mean": 0.48,
+      "std": 0.0775
     }
   },
   "best": "naive_bayes_char_2_4"
